@@ -119,7 +119,7 @@ class SCLAlert extends React.Component {
           >
             <SCLAlertHeader {...this.props} />
             <View style={styles.innerContent}>
-              <SCLAlertTitle {...this.props} />
+              {this.props.title !== null && <SCLAlertTitle {...this.props} />}
               <SCLAlertSubtitle {...this.props} />
               <View style={styles.bodyContainer}>{this.props.children}</View>
             </View>
